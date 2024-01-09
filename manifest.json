@@ -2,5 +2,13 @@
     "manifest_version" : 3,
     "name": "ActuScience",
     "version": "1.0.0",
-    "description": "display on Google home page some science news."
+    "description": "display on Google home page some science news.",
+
+    "content_scripts": [
+            {
+                "matches": ["https://www.google.fr/"],
+                "js": ["actuscience.js"]
+            }
+        ]
 }
+
