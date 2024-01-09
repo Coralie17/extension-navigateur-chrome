@@ -24,20 +24,20 @@ fetch(RSS_URL)
             `;
         });
 
-// code that can be insert in the html home page
+// // code that can be insert in the html home page
 
-        let addElement = () => {
-            let newDiv = document.createElement("div");
-            let newContent = document.createTextNode(html);
-            newDiv.appendChild(newContent);
-            let currentDiv = document.getElementById("tophf");
-            currentDiv.insertBefore(newDiv, currentDiv);
-        }
+//         let addElement = () => {
+//             let newDiv = document.createElement("div");
+//             let newContent = document.createTextNode(html);
+//             newDiv.appendChild(newContent);
+//             let currentDiv = document.getElementById("tophf");
+//             currentDiv.insertBefore(newDiv, currentDiv);
+//         }
 
-        document.body.onload = addElement;
+//         document.body.onload = addElement;
 
-        // document.body.insertAdjacentHTML("afterend", html);s
-    });
+//         // document.body.insertAdjacentHTML("afterend", html);s
+//     });
 
 
 
