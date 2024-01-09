@@ -29,7 +29,7 @@ fetch(RSS_URL)
         let addElement = () => {
             const newDiv = document.createElement("div");
             const newContent = html;
-            newDiv.appendChild(newContent);
+            newDiv.addElement(newContent);
             const currentDiv = document.getElementsByID("tophf");
             document.body.insertBefore(newDiv, currentDiv);
         }
