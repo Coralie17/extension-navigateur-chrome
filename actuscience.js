@@ -26,7 +26,7 @@ fetch(RSS_URL)
 
 // code that can be insert in the html home page
 
-        document.body.onload = addElement;
+        document.body.onload = addElement();
 
         let addElement = () => {
             const newDiv = document.createElement("div");
