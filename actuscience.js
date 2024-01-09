@@ -27,10 +27,10 @@ fetch(RSS_URL)
 // code that can be insert in the html home page
 
         let addElement = () => {
-            const newDiv = document.createElement("div");
-            const newContent = document.createTextNode(html);
+            let newDiv = document.createElement("div");
+            let newContent = document.createTextNode(html);
             newDiv.appendChild(newContent);
-            const currentDiv = document.getElementById("tophf");
+            let currentDiv = document.getElementById("tophf");
             currentDiv.insertBefore(newDiv, currentDiv);
         }
 
