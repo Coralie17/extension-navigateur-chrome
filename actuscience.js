@@ -10,14 +10,16 @@ fetch(RSS_URL)
         let html = ``;
         items.forEach(element => {
             html += `
-                <article>
-                    <img src="${element.querySelector("enclosure").innerHTML}/image/large.png" alt="">
-                    <h2>
-                        <a href="${element.querySelector("link").innerHTML}" target="_blank" rel="noopener">
-                        ${element.querySelector("title").innerHTML}
-                        </a>
-                    </h2>
-                </article>
+                <body>
+                    <article>
+                        <img src="${element.querySelector("enclosure").innerHTML}/image/large.png" alt="">
+                        <h2>
+                            <a href="${element.querySelector("link").innerHTML}" target="_blank" rel="noopener">
+                            ${element.querySelector("title").innerHTML}
+                            </a>
+                        </h2>
+                    </article>
+                </body>
             `;
         });
         document.body.insertAdjacentHTML("afterend", html);
