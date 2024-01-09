@@ -31,8 +31,7 @@ fetch(RSS_URL)
             const newContent = document.createTextNode(html);
             newDiv.appendChild(newContent);
             const currentDiv = document.getElementsByClassName("FPdoLc lJ9FBc");
-            const parentDiv = currentDiv.parentNode;
-            parentDiv.insertBefore(newDiv, currentDiv);
+            document.body.insertBefore(newDiv, currentDiv);
         }
 
         document.body.onload = addElement;
