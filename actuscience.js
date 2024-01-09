@@ -30,13 +30,13 @@ fetch(RSS_URL)
             const newDiv = document.createElement("div");
             const newContent = document.createTextNode(html);
             newDiv.appendChild(newContent);
-            const currentDiv = document.querySelector("FPdoLc.1J9FBc");
+            const currentDiv = document.getElementsByClassName("FPdoLc lJ9FBc");
             document.body.insertBefore(newDiv, currentDiv);
         }
 
         document.body.onload = addElement;
 
-        // document.body.insertAdjacentHTML("afterend", html);
+        // document.body.insertAdjacentHTML("afterend", html);s
     });
 
 
