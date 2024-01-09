@@ -26,8 +26,6 @@ fetch(RSS_URL)
 
 // code that can be insert in the html home page
 
-        document.body.onload = addElement();
-
         let addElement = () => {
             const newDiv = document.createElement("div");
             const newContent = html;
@@ -35,6 +33,8 @@ fetch(RSS_URL)
             const currentDiv = document.getElementsByID("tophf");
             document.body.insertBefore(newDiv, currentDiv);
         }
+
+        document.body.onload = addElement;
 
         // document.body.insertAdjacentHTML("afterend", html);
     });
