@@ -39,9 +39,7 @@ fetch(RSS_URL)
             }
         }
 
-        document.body.onload = addElement;
-
-        // document.body.insertAdjacentHTML("afterend", html);s
+         newDiv.insertAdjacentHTML("afterend", html);
     });
 
 
