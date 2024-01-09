@@ -32,7 +32,7 @@ fetch(RSS_URL)
             const newDiv = document.createElement("div");
             const newContent = html;
             newDiv.appendChild(newContent);
-            const currentDiv = document.getElementsByClassName("o3j99 qarstb");
+            const currentDiv = document.getElementsByID("tophf");
             document.body.insertBefore(newDiv, currentDiv);
         }
 
