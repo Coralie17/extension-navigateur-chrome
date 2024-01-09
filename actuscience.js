@@ -1,3 +1,4 @@
+// create a link to reach data from RSS feed of CNRS journal.
 const RSS_URL = `https://lejournal.cnrs.fr/rss`;
 
 fetch(RSS_URL)
@@ -5,6 +6,8 @@ fetch(RSS_URL)
     .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
     .then(data => {
         console.log(data);
+
+// create the html code to insert in the chrome home page.
 
         const items = data.querySelectorAll("item");
         let html = ``;
@@ -20,7 +23,10 @@ fetch(RSS_URL)
                 </article>
             `;
         });
-        document.body.insertAdjacentElement("afterend", html);
+
+// code that can be insert in the html home page
+
+        document.body.insertAdjacentHTML("afterend", html);
     });
 
 
