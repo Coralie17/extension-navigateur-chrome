@@ -30,7 +30,7 @@ fetch(RSS_URL)
             const newDiv = document.createElement("div");
             const newContent = document.createTextNode(html);
             newDiv.appendChild(newContent);
-            const currentDiv = document.getElementsByID("tophf");
+            const currentDiv = document.getElementByID("tophf");
             document.body.insertBefore(newDiv, currentDiv);
         }
 
