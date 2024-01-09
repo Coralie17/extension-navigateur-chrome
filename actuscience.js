@@ -26,7 +26,17 @@ fetch(RSS_URL)
 
 // code that can be insert in the html home page
 
-        document.body.insertAdjacentHTML("afterend", html);
+        document.body.onload = addElement;
+
+        let addElement = () => {
+            const newDiv = document.createElement("div");
+            const newContent = html;
+            newDiv.appendChild(newContent);
+            const currentDiv = document.getElementsByClassName("o3j99 qarstb");
+            document.body.insertBefore(newDiv, currentDiv);
+        }
+
+        // document.body.insertAdjacentHTML("afterend", html);
     });
 
 
