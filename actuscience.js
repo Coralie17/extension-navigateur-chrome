@@ -20,7 +20,7 @@ fetch(RSS_URL)
                 </article>
             `;
         });
-        document.body.insertAdjacentHTML("beforebegin", html);
+        document.body.insertAdjacentHTML("afterend", html);
     });
 
 
