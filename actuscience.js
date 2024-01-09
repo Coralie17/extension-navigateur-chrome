@@ -37,9 +37,8 @@ fetch(RSS_URL)
             else {
                 console.error("Error")
             }
-        }
-
-         newDiv.insertAdjacentHTML("afterend", html);
+            newDiv.insertAdjacentHTML("afterend", html);
+        }         
     });
 
 
