@@ -28,13 +28,18 @@ fetch(RSS_URL)
 
          let addElement = () => {
              let newDiv = document.createElement("div");
-             let newContent = document.createTextNode(html);
-             newDiv.appendChild(newContent);
+             newDiv.innerHTML = html
              let currentDiv = document.getElementById("tophf");
-            currentDiv.insertBefore(newDiv, currentDiv);
+            
+            if (currentDiv && currentDiv.parentNode) {
+                currentDiv.parentNode.insertBefore(newDiv, currentDiv);
+            }
+            else {
+                console.error("Error")
+            }
+            document.body.onload =addElement
          }
 
-        document.body.onload = addElement;
 
             // document.body.insertAdjacentHTML("afterend", html);
      });
