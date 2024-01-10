@@ -37,11 +37,11 @@ fetch(RSS_URL)
                 currentDiv.parentNode.insertBefore(newDiv, currentDiv);
             }
             else {
-                console.error("Error")
+                console.error("I'm an Error")
             }
-         }
+         };
 
-         document.onload = addElement();
+         document.body.onload = addElement();
 
 
             // document.body.insertAdjacentHTML("afterend", html);
