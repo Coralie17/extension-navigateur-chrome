@@ -32,13 +32,15 @@ fetch(RSS_URL)
              let newDiv = document.createElement("div");
              newDiv.innerHTML = html
              let currentDiv = document.querySelector("o3j99 qarstb");
+
+             currentDiv.appendChild(newDiv)
             
-            if (currentDiv && currentDiv.parentNode) {
-                currentDiv.parentNode.insertBefore(newDiv, currentDiv);
-            }
-            else {
-                console.error("Error")
-            }
+            // if (currentDiv && currentDiv.parentNode) {
+            //     currentDiv.parentNode.insertBefore(newDiv, currentDiv);
+            // }
+            // else {
+            //     console.error("Error")
+            // }
          }
 
          document.onload = addElement();
