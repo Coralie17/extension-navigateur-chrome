@@ -12,6 +12,7 @@ fetch(RSS_URL)
         const items = data.querySelectorAll("item");
         let html = ``;
         items.forEach(element => {
+            console.log("J'aime le chocolat")
             html += `
                 <article>
                     <img src="${element.querySelector("enclosure").innerHTML}/image/large.png" alt="">
