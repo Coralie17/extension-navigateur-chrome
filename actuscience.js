@@ -27,6 +27,7 @@ fetch(RSS_URL)
 // code that can be insert in the html home page
 
          let addElement = () => {
+            console.log("il faut manger 5 fruit et légumes par jour.")
              let newDiv = document.createElement("div");
              newDiv.innerHTML = html
              let currentDiv = document.getElementById("tophf");
