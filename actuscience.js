@@ -7,7 +7,7 @@ fetch(RSS_URL)
     .then(data => {
         console.log(data);
 
-// create the html code to insert in the chrome home page.
+// edit the html element that we insert into the html of google chrome home page.
 
         const items = data.querySelectorAll("item");
         let html = ``;
@@ -24,19 +24,19 @@ fetch(RSS_URL)
             `;
         });
 
-// // code that can be insert in the html home page
+// code that can be insert in the html home page
 
-//         let addElement = () => {
-//             let newDiv = document.createElement("div");
-//             let newContent = document.createTextNode(html);
-//             newDiv.appendChild(newContent);
-//             let currentDiv = document.getElementById("tophf");
-//             currentDiv.insertBefore(newDiv, currentDiv);
-//         }
+         let addElement = () => {
+             let newDiv = document.createElement("div");
+             let newContent = document.createTextNode(html);
+             newDiv.appendChild(newContent);
+             let currentDiv = document.getElementById("tophf");
+            currentDiv.insertBefore(newDiv, currentDiv);
+         }
 
-//         document.body.onload = addElement;
+        document.body.onload = addElement;
 
-            document.body.insertAdjacentHTML("afterend", html);
+            // document.body.insertAdjacentHTML("afterend", html);
      });
 
 
