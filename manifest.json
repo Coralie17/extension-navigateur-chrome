@@ -6,7 +6,7 @@
 
     "content_scripts": [
             {
-                "matches": ["https://www.google.fr/"],
+                "matches": ["https://www.google.com/"],
                 "js": ["actuscience.js"]
             }
         ]
