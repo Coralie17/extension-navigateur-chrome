@@ -1,5 +1,6 @@
 // create a link to reach data from RSS feed of CNRS journal.
 const RSS_URL = `https://lejournal.cnrs.fr/rss`;
+const RSS_URL2 = `https://www.pourlascience.fr/rss.xml`
 
 fetch(RSS_URL)
     .then(response => response.text())
@@ -31,7 +32,8 @@ fetch(RSS_URL)
             console.log("il faut manger 5 fruit et légumes par jour.")
              let newDiv = document.createElement("div");
              newDiv.innerHTML = html
-             let currentDiv = document.querySelector("o3j99 qarstb");
+             let currentDiv = document.querySelector(".o3j99.qarstb");
+             console.log(currentDiv, typeof currentDiv)
 
              currentDiv.appendChild(newDiv)
             
