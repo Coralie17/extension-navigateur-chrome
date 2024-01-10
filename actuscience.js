@@ -39,7 +39,7 @@ fetch(RSS_URL)
             else {
                 console.error("Error")
             }
-            document.body.onload =addElement
+        document.body.onload =addElement
          }
 
 
