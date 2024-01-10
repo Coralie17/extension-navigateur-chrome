@@ -41,7 +41,7 @@ fetch(RSS_URL)
             }
          }
 
-         document.body.onload = addElement
+         document.onload = addElement();
 
 
             // document.body.insertAdjacentHTML("afterend", html);
