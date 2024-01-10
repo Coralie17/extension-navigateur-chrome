@@ -31,7 +31,7 @@ fetch(RSS_URL)
             console.log("il faut manger 5 fruit et légumes par jour.")
              let newDiv = document.createElement("div");
              newDiv.innerHTML = html
-             let currentDiv = document.getElementByClassName("o3j99 qarstb");
+             let currentDiv = document.getElementByClassName("o3j99.qarstb");
             
             if (currentDiv && currentDiv.parentNode) {
                 currentDiv.parentNode.insertBefore(newDiv, currentDiv);
