@@ -1,10 +1,16 @@
-.o3j99.qarstb {
+body {
+    background-color: red;
+}
+
+#Articles {
     background-color: blueviolet;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows:  1fr 1fr 1fr 1fr;
 }
 
 article {
+    margin: 10px;
+    padding: 10px;
     background-color: chocolate;
 }
