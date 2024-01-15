@@ -1,0 +1,10 @@
+.o3j99.qarstb {
+    background-color: blueviolet;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+article {
+    background-color: chocolate;
+}
