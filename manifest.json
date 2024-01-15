@@ -8,7 +8,8 @@
             {
                 "matches": ["https://www.google.fr/"],
                 "js": ["actuscience.js"],
-                "css": ["actuScience.css"]
+                "css": ["actuScience.css"],
+                "ressources": ["shot-by-cerqueira-0o_GEzyargo-unsplash.jpg"]
             }
         ]
 }
