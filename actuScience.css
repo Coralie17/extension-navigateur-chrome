@@ -13,4 +13,7 @@ article {
     margin: 10px;
     padding: 10px;
     background-color: chocolate;
+    border-radius: 30px;
+    border-style: double;
+    border-color: rgb(126, 180, 250);
 }
