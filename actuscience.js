@@ -4,6 +4,7 @@ const RSS_URL2 = `https://www.pourlascience.fr/rss.xml`
 
 let html = ``;
 
+
 // -----------------------------------------------------------------------------------------------------------------------------------------------------
 // we want to sort science news and recover date time and display on our html files the news of the 7 last days.
 
@@ -81,3 +82,8 @@ fetch(RSS_URL2)
 
     document.onload = addElement();
 });
+
+// let image = document.createElement("img");
+// image.src = chrome.runtime.getURL("cielEtoile.jpg");
+// let articleImage = document.getElementById("Articles");
+// articleImage.appendChild(image)

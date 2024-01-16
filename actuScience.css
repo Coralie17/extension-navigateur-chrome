@@ -1,5 +1,8 @@
+html body {
+    background-image: url(images/cielEtoile.jpg);
+}
+
 #Articles {
-    background-image: url("cielEtoile.jpg");
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows:  1fr 1fr 1fr 1fr;
