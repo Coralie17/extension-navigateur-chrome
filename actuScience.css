@@ -1,6 +1,7 @@
 html body {
-    background-image: url(images/cielEtoile.jpg);
-}
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(254, 254, 254, 0.3)), 
+    url('https://images.unsplash.com/photo-1595520519880-a86c48ea536c?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}   
 
 #Articles {
     display: grid;
@@ -11,7 +12,6 @@ html body {
 article {
     margin: 10px;
     padding: 10px;
-    background-color: chocolate;
     border-radius: 30px;
     border-style: double;
     border-color: rgb(126, 180, 250);

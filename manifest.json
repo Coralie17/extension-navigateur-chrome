@@ -6,6 +6,7 @@
 
     "content_scripts": [
             {
+                "ressources": ["images/cielEtoile.jpg"],
                 "matches": ["https://www.google.fr/"],
                 "js": ["actuscience.js"],
                 "css": ["actuScience.css"]

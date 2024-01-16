@@ -39,10 +39,13 @@ fetch(RSS_URL)
 
         const items = data.querySelectorAll("item");
         items.forEach(element => {
+            console.log(element.querySelector("enclosure").getAttribute("url"))
             console.log("J'aime le chocolat")
+            let picture = element.querySelector("enclosure").getAttribute("url")
+            
             html += `
-                <article>
-                    <img src="${element.querySelector("enclosure").innerHTML}" alt="">
+                <article id="news" style="background-image:url(${picture}); background-size:cover">
+                
                     <h2>
                         <a href="${element.querySelector("link").innerHTML}" target="_blank" rel="noopener">
                         ${element.querySelector("title").innerHTML}
@@ -50,7 +53,9 @@ fetch(RSS_URL)
                     </h2>
                 </article>
             `;
+            console.log(html);
         });
+        
      });
 
 
@@ -67,9 +72,12 @@ fetch(RSS_URL2)
             dateOfSevenDaysAgo()
             const d2 = element.querySelector("pubDate").textContent;
             const pubDateNews = new Date(d2).getTime();
+            let picture1 = element.querySelector("enclosure").getAttribute("url")
+            console.log(picture1)
+
             if (pubDateNews >= dateOfSevenDaysAgo() && pubDateNews <= todayDate()){
                 html += `
-                    <article>
+                    <article style="background-image:url(${picture1}); background-size:cover">
                         <h2>
                             <a href="${element.querySelector("link").innerHTML}" target="_blank" rel="noopener">
                             ${element.querySelector("title").textContent}
@@ -77,13 +85,18 @@ fetch(RSS_URL2)
                         </h2>
                     </article>
                 `;
+                console.log(article)
             }
         });
 
     document.onload = addElement();
 });
 
-// let image = document.createElement("img");
-// image.src = chrome.runtime.getURL("cielEtoile.jpg");
-// let articleImage = document.getElementById("Articles");
-// articleImage.appendChild(image)
+
+
+
+
+//  let image = document.createElement("img");
+//  image.src = chrome.runtime.getURL("images/cielEtoile.jpg");
+//  let articleImage = document.getElementById("Articles");
+//  articleImage.appendChild(image)
