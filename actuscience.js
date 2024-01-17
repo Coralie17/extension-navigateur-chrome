@@ -39,12 +39,10 @@ fetch(RSS_URL)
 
         const items = data.querySelectorAll("item");
         items.forEach(element => {
-            console.log(element.querySelector("enclosure").getAttribute("url"))
-            console.log("J'aime le chocolat")
             let picture = element.querySelector("enclosure").getAttribute("url")
             
             html += `
-                <article id="news" style="background-image:url(${picture}); background-size:cover">
+                <article id="news" style="background-image:url(${picture})">
                 
                     <h2>
                         <a href="${element.querySelector("link").innerHTML}" target="_blank" rel="noopener">
@@ -53,7 +51,7 @@ fetch(RSS_URL)
                     </h2>
                 </article>
             `;
-            console.log(html);
+            console.log(html)
         });
         
      });
@@ -72,12 +70,12 @@ fetch(RSS_URL2)
             dateOfSevenDaysAgo()
             const d2 = element.querySelector("pubDate").textContent;
             const pubDateNews = new Date(d2).getTime();
-            let picture1 = element.querySelector("enclosure").getAttribute("url")
-            console.log(picture1)
+            let picture = element.querySelector("enclosure").getAttribute("url")
 
             if (pubDateNews >= dateOfSevenDaysAgo() && pubDateNews <= todayDate()){
+                console.log("j'aime les chocapic")
                 html += `
-                    <article style="background-image:url(${picture1}); background-size:cover">
+                    <article style="background-image:url('${picture}'); background-size:cover">
                         <h2>
                             <a href="${element.querySelector("link").innerHTML}" target="_blank" rel="noopener">
                             ${element.querySelector("title").textContent}
@@ -85,12 +83,16 @@ fetch(RSS_URL2)
                         </h2>
                     </article>
                 `;
-                console.log(article)
+                console.log(html)
             }
         });
+        
 
-    document.onload = addElement();
+        document.onload = addElement();
+   
 });
+
+
 
 
 
