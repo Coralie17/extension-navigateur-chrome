@@ -6,13 +6,18 @@ html body {
 #Articles {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows:  1fr 1fr 1fr 1fr;
+    grid-template-rows:  1fr 1fr 1fr 1fr 1fr;
 }
 
 article {
     margin: 10px;
     padding: 10px;
     border-radius: 30px;
-    border-style: double;
+    border-style: hidden;
     border-color: rgb(126, 180, 250);
+    box-shadow: inset 15px 15px 20px rgb(26, 26, 35), inset -10px -10px 20px rgb(190, 190, 241, 0.5);
+};
+
+h2:hover {
+    width: 100px;
 }

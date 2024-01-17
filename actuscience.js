@@ -29,32 +29,35 @@ let addElement = () => {
 
 // -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-fetch(RSS_URL)
-    .then(response => response.text())
-    .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
-    .then(data => {
+ fetch(RSS_URL)
+     .then(response => response.text())
+     .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+     .then(data => {
         console.log(data);
 
 // edit the html element that we insert into the html of google chrome home page.
 
-        const items = data.querySelectorAll("item");
-        items.forEach(element => {
-            let picture = element.querySelector("enclosure").getAttribute("url")
+         const items = data.querySelectorAll("item");
+         items.forEach(element => {
+             let enclosure = element.querySelector("enclosure")
             
-            html += `
-                <article id="news" style="background-image:url(${picture})">
+            if (enclosure != null){
+            let picture = enclosure.getAttribute("url")
+             html += `
+                 <article id="news" style="background-image:url(${picture}); background-size:cover">
                 
-                    <h2>
-                        <a href="${element.querySelector("link").innerHTML}" target="_blank" rel="noopener">
-                        ${element.querySelector("title").innerHTML}
-                        </a>
-                    </h2>
-                </article>
-            `;
-            console.log(html)
-        });
+                     <h2>
+                         <a href="${element.querySelector("link").innerHTML}" target="_blank" rel="noopener">
+                         ${element.querySelector("title").innerHTML}
+                         </a>
+                     </h2>
+                 </article>
+             `;
+            }
+            
+         });
         
-     });
+      });
 
 
 // -----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -70,10 +73,11 @@ fetch(RSS_URL2)
             dateOfSevenDaysAgo()
             const d2 = element.querySelector("pubDate").textContent;
             const pubDateNews = new Date(d2).getTime();
-            let picture = element.querySelector("enclosure").getAttribute("url")
+            let enclosure = element.querySelector("enclosure")
 
-            if (pubDateNews >= dateOfSevenDaysAgo() && pubDateNews <= todayDate()){
+            if (pubDateNews >= dateOfSevenDaysAgo() && pubDateNews <= todayDate() && enclosure != null){
                 console.log("j'aime les chocapic")
+                let picture = `https:${enclosure.getAttribute("url")}`
                 html += `
                     <article style="background-image:url('${picture}'); background-size:cover">
                         <h2>
@@ -82,15 +86,14 @@ fetch(RSS_URL2)
                             </a>
                         </h2>
                     </article>
-                `;
-                console.log(html)
+                `;    
             }
         });
-        
 
         document.onload = addElement();
    
 });
+console.log(html)
 
 
 
