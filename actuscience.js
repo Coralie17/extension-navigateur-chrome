@@ -47,7 +47,7 @@ let addElement = () => {
                  <article id="news" style="background-image:url(${picture}); background-size:cover">
                 
                      <h2>
-                         <a href="${element.querySelector("link").innerHTML}" target="_blank" rel="noopener">
+                         <a href="${element.querySelector("link").innerHTML}" target="_blank" rel="noopener" style="font-size: medium; color: white; text-shadow: 2px 0 0 #000, 2px 2px 0 #000, 0 2px 0 #000, 2px 2px 0 #000, -2px 0 0 #000, -2px -2px 0 #000, 0 -2px 0 #000, 2px -2px 0 #000">
                          ${element.querySelector("title").innerHTML}
                          </a>
                      </h2>
@@ -81,7 +81,7 @@ fetch(RSS_URL2)
                 html += `
                     <article style="background-image:url('${picture}'); background-size:cover">
                         <h2>
-                            <a href="${element.querySelector("link").innerHTML}" target="_blank" rel="noopener">
+                            <a href="${element.querySelector("link").innerHTML}" target="_blank" rel="noopener" style="font-size: medium; color: white; text-shadow: 2px 0 0 #000, 2px 2px 0 #000, 0 2px 0 #000, 2px 2px 0 #000, -2px 0 0 #000, -2px -2px 0 #000, 0 -2px 0 #000, 2px -2px 0 #000">
                             ${element.querySelector("title").textContent}
                             </a>
                         </h2>
