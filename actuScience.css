@@ -16,8 +16,5 @@ article {
     border-style: hidden;
     border-color: rgb(126, 180, 250);
     box-shadow: inset 15px 15px 20px rgb(26, 26, 35), inset -10px -10px 20px rgb(190, 190, 241, 0.5);
+    text-align: center;
 };
-
-h2:hover {
-    width: 100px;
-}

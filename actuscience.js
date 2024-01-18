@@ -94,14 +94,3 @@ fetch(RSS_URL2)
    
 });
 console.log(html)
-
-
-
-
-
-
-
-//  let image = document.createElement("img");
-//  image.src = chrome.runtime.getURL("images/cielEtoile.jpg");
-//  let articleImage = document.getElementById("Articles");
-//  articleImage.appendChild(image)
